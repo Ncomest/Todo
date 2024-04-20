@@ -1,0 +1,23 @@
+@import "./../../index.scss";
+
+.main-block {
+ min-height: 100dvh;
+ @extend .flexbox-styles;
+ flex-direction: column;
+ gap: 10px;
+
+ label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+  font-size: 14px;
+ }
+
+ #input-todo {
+  padding: 5px 10px;
+  border: 1px solid brown;
+  border-radius: 5px;
+  outline: none;
+ }
+}
