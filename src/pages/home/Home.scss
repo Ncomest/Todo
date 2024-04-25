@@ -5,6 +5,8 @@
  @extend .flexbox-styles;
  flex-direction: column;
  gap: 10px;
+ background-color: rgb(43, 37, 132);
+ color: #8a8686;
 
  label {
   display: flex;
