@@ -1,17 +1,16 @@
 import { useAppDispacth, useAppSelector } from "./hooks/redux";
-import { userSlice } from "./store/reducers/UserSlice";
+import {counterSlice} from "./store/reducers/CounterSlice";
 
 function App() {
- const  count  = useAppSelector(state => state.userReducer.count);
- const { increment } = userSlice.actions;
- const { decrement } = userSlice.actions;
  const dispatch = useAppDispacth();
+ const count = useAppSelector((state) => state.counter.count);
+ const { increment } = counterSlice.actions;
+
 
  return (
   <div className="App">
-   <h1>count:{count}</h1>
-   <button onClick={() => dispatch(increment(5))}>Increment</button>
-   <button onClick={() => dispatch(decrement(5))}>Decrement</button>
+   <h1>{count}</h1>
+   <button onClick={() => dispatch(increment(5))}>INC</button>
   </div>
  );
 }
